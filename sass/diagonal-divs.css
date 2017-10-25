@@ -1,0 +1,7 @@
+.diagonal-divs__left {
+  transform: rotate(3deg);
+  padding: 15px; }
+
+.diagonal-divs__right {
+  transform: rotate(-3deg);
+  padding: 15px; }

@@ -1,0 +1,33 @@
+/*colors*/
+$brand-primary: #fff;
+$brand-shock-color: #e3170a;
+$neon-turquoise: #00ffff;
+$brand-secondary: #2e2f2f;
+/*diagonal divs*/
+
+/*break points*/
+$screen-xs: 425px;
+$screen-sm: 768px;
+$screen-md: 768px;
+$screen-lg: 1250px;
+
+/* font weights*/
+$light: 200;
+$regular: 600;
+$bold: 800;
+
+/*flex-basis*/
+$flex-third: 30%;
+$flex-half: 50%;
+$flex-full: 100%;
+
+@mixin flex($justify_c: center, $align_i: center, $wrap: wrap, $row: row) {
+  display: flex;
+  justify-content: $justify_c;
+  align-items: $align_i;
+  flex-flow: $wrap $row;
+}
+
+@mixin flex-basis($flex_b) {
+  flex-basis: $flex_b;
+}

@@ -1,0 +1,9 @@
+.diagonal-divs {
+  color: $brand-primary;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  background-color: $brand-secondary;
+  overflow: hidden;
+  @include flex();
+}

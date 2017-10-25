@@ -1,47 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600,800');
 body {
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
 }
 
-/* .App {
+.App {
   text-align: center;
-}
-.App h1 {
-  font-weight: 800;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-} */
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  h1 {
+    font-weight: $bold;
+    .shock-value {
+      color: $brand-shock-color;
+      margin-right: 5px;
+    }
   }
-  to {
-    transform: rotate(360deg);
+  .light-text {
+    font-weight: $light;
+    display: block;
+    color: rgba(0, 0, 0, 0.2);
+  }
+  .App-title {
+    font-size: 1.5em;
   }
 }
 
 /***********************************/
 /***** Navigation menu Styling *****/
 /***********************************/
+
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
@@ -89,35 +74,18 @@ body {
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
-
 /***********************************/
 /******** Hero Image Styling *******/
 /***********************************/
 #hero {
   height: 100vh;
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex();
 }
-
 /***********************************/
 /******** Portfolio Styling ********/
 /***********************************/
-#portfolio-wrapper {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-flow: wrap row;
-}
 
-.portfolio-cards {
-  flex-basis: 30%;
-  margin: 15px;
-}
-
-@media all and (max-width: 700px) {
-  .portfolio-cards {
-    flex-basis: 100%;
-  }
+.skills-wrapper {
+  @include flex();
 }
