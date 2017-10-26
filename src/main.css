@@ -16,49 +16,71 @@
   align-items: center;
   flex-flow: wrap row; }
 
-#portfolio-cards-wrapper {
+.about-content {
   display: flex;
   justify-content: center;
+  align-items: center; }
+  .about-content .about-item {
+    flex-basis: 40%; }
+  .about-content .image-circle-border {
+    height: 150px;
+    width: 150px;
+    background-color: black;
+    border-radius: 100%; }
+
+#portfolio-cards-wrapper {
+  display: flex;
+  justify-content: flex-start;
   flex-flow: wrap row;
   position: relative; }
-
-#hackathon-section {
-  background: url("https://static.boredpanda.com/blog/wp-content/uploads/2015/01/brothers-grimm-wanderings-landscape-photography-kilian-schonberger-3.jpg") center center no-repeat;
-  background-size: cover; }
 
 .portfolio-cards {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 10px 15px;
-  flex-basis: 30%;
+  flex-basis: 100%;
   height: 250px;
-  position: relative; }
-  @media all and (max-width: 700px) {
+  position: relative;
+  cursor: pointer; }
+  @media all and (min-width: 700px) {
     .portfolio-cards {
-      flex-basis: 100%; } }
-
-.hidden {
-  display: none; }
+      flex-grow: 1;
+      flex-basis: 30%; } }
+  @media all and (min-width: 900px) {
+    .portfolio-cards {
+      flex-grow: 0; } }
 
 .card-content {
   max-width: 1200px;
   margin: 0 auto;
-  position: fixed;
-  overflow: auto; }
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap row; }
+  .card-content .col {
+    flex-basis: 100%; }
+    @media all and (min-width: 550px) {
+      .card-content .col {
+        flex-basis: 45%;
+        margin: 0 15px; } }
+  .card-content .links {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1; }
+
+.hidden {
+  display: none; }
 
 .transform {
-  -webkit-transition: all 2s ease;
-  -moz-transition: all 2s ease;
-  -o-transition: all 2s ease;
-  -ms-transition: all 2s ease;
-  transition: all 2s ease; }
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .transform:hover {
+    box-shadow: 0 14px 28px rgba(248, 3, 3, 0.25), 0 10px 10px rgba(223, 12, 12, 0.22); }
 
 .transform-position {
   position: static; }
 
 .app-card {
-  background-color: rgba(0, 0, 0, 0.5);
   -webkit-transition: all 2s ease;
   -moz-transition: all 2s ease;
   -o-transition: all 2s ease;
@@ -66,6 +88,8 @@
   transition: all 2s ease;
   width: 100%;
   height: 100%; }
+  .app-card:hover {
+    background-color: rgba(0, 0, 0, 0.5); }
 
 .transform-active {
   background-color: #fff;
@@ -75,6 +99,8 @@
   left: 0;
   min-width: 100vw;
   min-height: 100vh; }
+  .transform-active:hover {
+    background-color: #fff; }
 
 p {
   -webkit-animation: fadein 2s;
@@ -121,6 +147,61 @@ p {
   to {
     opacity: 1; } }
 
+.contact-form-wrapper {
+  margin-bottom: 2em; }
+
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: wrap row;
+  width: 100%;
+  margin-bottom: 3em; }
+  .contact-form .group {
+    flex-basis: 100%; }
+    .contact-form .group input {
+      background-color: #2e2f2f;
+      color: #fff;
+      height: 50px;
+      width: 80%;
+      margin-bottom: 2em;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      text-align: center;
+      font-size: 1.2em;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      caret-color: #df0c0c; }
+      .contact-form .group input:hover, .contact-form .group input:focus {
+        box-shadow: 0 14px 28px rgba(248, 3, 3, 0.25), 0 10px 10px rgba(223, 12, 12, 0.22); }
+      @media all and (min-width: 700px) {
+        .contact-form .group input {
+          width: 50%; } }
+    .contact-form .group .textarea-item {
+      background-color: #2e2f2f;
+      height: 150px;
+      color: #fff;
+      width: 80%;
+      margin-bottom: 3em;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      text-align: center;
+      font-size: 1.2em;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      caret-color: #df0c0c; }
+      .contact-form .group .textarea-item:hover, .contact-form .group .textarea-item:focus {
+        box-shadow: 0 14px 28px rgba(248, 3, 3, 0.25), 0 10px 10px rgba(223, 12, 12, 0.22); }
+      @media all and (min-width: 700px) {
+        .contact-form .group .textarea-item {
+          width: 50%; } }
+
+button.submit-button {
+  height: 20px;
+  width: 30%; }
+
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0; }
@@ -138,6 +219,15 @@ body {
     color: rgba(0, 0, 0, 0.2); }
   .App .App-title {
     font-size: 1.5em; }
+  .App .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 
 /***********************************/
 /***** Navigation menu Styling *****/

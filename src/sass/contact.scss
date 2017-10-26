@@ -1,0 +1,64 @@
+.contact-form-wrapper {
+  margin-bottom: 2em;
+}
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: wrap row;
+  width: 100%;
+  margin-bottom: 3em;
+  .group {
+    flex-basis: 100%;
+    input {
+      background-color: $brand-secondary;
+      color: $brand-primary;
+      height: 50px;
+      width: 80%;
+      margin-bottom: 2em;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      text-align: center;
+      font-size: 1.2em;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      caret-color: rgb(223, 12, 12);
+      &:hover,
+      &:focus {
+        box-shadow: 0 14px 28px rgba(248, 3, 3, 0.25),
+          0 10px 10px rgba(223, 12, 12, 0.22);
+      }
+      @media all and (min-width: 700px) {
+        width: 50%;
+      }
+    }
+    .textarea-item {
+      background-color: $brand-secondary;
+      height: 150px;
+      color: $brand-primary;
+      width: 80%;
+      margin-bottom: 3em;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      text-align: center;
+      font-size: 1.2em;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      caret-color: rgb(223, 12, 12);
+      &:hover,
+      &:focus {
+        box-shadow: 0 14px 28px rgba(248, 3, 3, 0.25),
+          0 10px 10px rgba(223, 12, 12, 0.22);
+      }
+      @media all and (min-width: 700px) {
+        width: 50%;
+      }
+    }
+  }
+}
+button.submit-button {
+  height: 20px;
+  width: 30%;
+}

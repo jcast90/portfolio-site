@@ -1,0 +1,14 @@
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .about-item {
+    flex-basis: 40%;
+  }
+  .image-circle-border {
+    height: 150px;
+    width: 150px;
+    background-color: black;
+    border-radius: 100%;
+  }
+}
