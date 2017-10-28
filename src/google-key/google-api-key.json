@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "portfolio-contact-form-184302",
+  "private_key_id": "de3f02c4b57942957475e20b3821a5ea952a14c4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDSMluu8F7Ql7Nv\nmGrKZ80RS5io8Qs/Wc5DbaNitig0oLchj2HBPgMUKAfrTS6JtuZPROHSj3t/gfs/\nvzz66QbmugfwZ5mmgKV7kOjd1wd560l+voHyk3zZCkU2IfhwSAhb96gw6QX4RLsn\n2OVucWxjVQAfUi9805SH0Vq899hn19VqyrcYmjLWVIBzLtC74diSJWCwOTmRGYLa\n2q7h4jXn4sEotKiOtuNboj6u7F80MhnEncbrg1ThNe7vISeB7fVIAB3Z54Vo6exi\nkJoDqLLV926oKjdDSRuIOnLh1czqqxByFmxBOW5Zr6mVgMPDHLGN6zDVzsVubAt1\nkKMaiM1ZAgMBAAECggEAC0KGVcprkdbM8AZYRiWl8kfvhbFJgUHEaMLhSAlRAXMd\nWRXItOTanl3mNE0kpPaGw0O1D/LLhbeTtKtmaI+xSz/Q60IDFMyUamU6jDoXtoi+\n0Nect3IxWgd3HXpXyCmbq22KjxNhVGM+KvLIy5AVsDaEwXWSGw8GFSzgviznfoLg\n8NpdBAFTb2+CDwEEEAd8n20KhTQk7iUIdODDBuC5eIzGDuMdVY/csgCta9OJjaHq\nysihpiCA4j+VFkLNmulxqySw5tq0Uq79T8dDNSGrfYZeaEbuqaGC1liNYAyf4Tma\n02ccQ6jZh+8x9GYHOjr94EJlMED5vyALBtyGYD9HdwKBgQD5paHWOcH+/S7fZ7/w\nJZxT1uJ68aHPj7K5L8eX35psoba9NAU1vinbTAeUo0Ry/VeYgbm4CVe4PIdFrk66\nIksMoocjECg0UdYVbZ5TuzU+N1yplY4k1hJlilCvNOXX7ZfDouh493NzbNu9hhSh\n9QlohYydg2ofHEASsvlr8TZJ/wKBgQDXi7hos2N2SdO2FMiHCbyV7NIBuHnfKq8l\naHQd5Z5/whMA2i5SAJzZ1u7KTDjnUtPpQndYwv5G20PrGqJw7HaJ1jj1vvoC/IqA\nrEp1KAhOLw/a4TQZj5UyEXiVc5Qa3A0Thdk7/7NFBSyDac7R6rtBgO4XznY1crs0\nXVKwnJF4pwKBgQDlnyuUV9vQJiCO7GbnBDEeDHCUlNw4hfvlycTUNJ9dfAERVl/U\nZu0pAG2YkfPLsKp5ZBjm5fEBTOs/dGyFWDWfkX6rCZlxRjSb0Q/oBDGc4F8ivKTZ\nzO1u6CH+hbFDQw5sq9MYMMLIUEBtun4P2cqlkPEdkFpz8xAcIvK4Dk3ZEQKBgBEY\nheHYCJWDOYWBlH4RaaHCjM2SIihvLEEdTchpQ+8CJ5uzsmTSo54ri/kDnqfKTAB+\nQxUJMj3QekyVajjmqGg6U346TX4bJakbATTVngMFfI5xuj4kw0KbXCMObbrLpUXd\nIeO+XiulQ2iQ5dSEd6G0Zi4BNCL9HJgEpuBXKrqVAoGBAJa/i1SLvIstbzYcO9Jn\nC2oBr/zMq3dU8+ApRR8vfKX/PDgQJRWP2Vv1dmdTP97qsV+Lnvf/8DrPH1PW/IGj\nl751LbvjmGr8fmslntBKyCN9zlwQcdaRxZ0T4B/b9CErQGZnSh4uv9KwjNqT9W2L\nTnhB4bMHT8/s9+gUPO4MHQ6o\n-----END PRIVATE KEY-----\n",
+  "client_email": "portfolio@portfolio-contact-form-184302.iam.gserviceaccount.com",
+  "client_id": "113734828731904464250",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/portfolio%40portfolio-contact-form-184302.iam.gserviceaccount.com"
+}

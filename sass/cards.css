@@ -45,7 +45,7 @@
 .transform {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
   .transform:hover {
-    box-shadow: 0 14px 28px rgba(248, 3, 3, 0.25), 0 10px 10px rgba(223, 12, 12, 0.22); }
+    box-shadow: 0 19px 38px rgba(248, 3, 3, 0.3), 0 15px 12px rgba(223, 12, 12, 0.22); }
 
 .transform-position {
   position: static; }
@@ -60,6 +60,9 @@
   height: 100%; }
   .app-card:hover {
     background-color: rgba(0, 0, 0, 0.5); }
+    .app-card:hover:after {
+      color: #fff;
+      content: attr(data-parent); }
 
 .transform-active {
   background-color: #fff;
@@ -82,6 +85,32 @@ p {
   -o-animation: fadein 2s;
   /* Opera < 12.1 */
   animation: fadein 2s; }
+
+.flip-container {
+  width: 320px;
+  height: 480px;
+  perspective: 1000px; }
+  .flip-container .flipper.flipped {
+    transform: rotateY(180deg); }
+  .flip-container .front,
+  .flip-container .back {
+    flex-basis: 80%;
+    height: auto;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .flip-container .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative; }
+  .flip-container .front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+    background-color: red; }
+  .flip-container .back {
+    transform: rotateY(180deg); }
 
 @keyframes fadein {
   from {

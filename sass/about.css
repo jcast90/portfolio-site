@@ -1,11 +1,24 @@
 .about-content {
   display: flex;
-  justify-content: center;
-  align-items: center; }
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: wrap row; }
   .about-content .about-item {
-    flex-basis: 40%; }
-  .about-content .image-circle-border {
-    height: 150px;
-    width: 150px;
-    background-color: black;
-    border-radius: 100%; }
+    flex-basis: 100%; }
+    @media all and (min-width: 900px) {
+      .about-content .about-item {
+        flex-basis: 40%; } }
+    .about-content .about-item p {
+      line-height: 2em;
+      text-align: left;
+      font-weight: 600;
+      padding: 15px; }
+  .about-content .image img {
+    height: auto;
+    width: 80%;
+    margin: 2em;
+    box-shadow: 1px 18px 19px rgba(0, 0, 0, 0.3);
+    transition: all .3s ease-in-out; }
+    .about-content .image img:hover {
+      transform: scale(0.9);
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.8); }

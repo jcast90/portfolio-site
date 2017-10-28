@@ -1,17 +1,27 @@
 import React, { Component } from 'react';
+import profile from '../assets/profile-pic2.jpg';
 
 export class About extends Component {
   render() {
+    var background = {
+      backgroundImage: `url(${profile})`,
+      backgroundPosition: 'center center',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'none'
+    };
     return (
       <div className="about-section">
         <header className="App-header">
           <h1>
-            About<span className="shock-value">.</span>
+            About Jonathan<span className="shock-value">.</span>
           </h1>
         </header>
         <div className="about-content">
           <div className="about-item image-wrapper">
-            <div className="image-circle-border" />
+            <div className="image">
+              {' '}
+              <img src={profile} />
+            </div>
           </div>
           <div className="about-item content-wrapper">
             <p>
@@ -38,14 +48,14 @@ export class About extends Component {
             <div className="group">
               <input
                 className="input-item name-input"
-                placeholder="What's your name?"
+                placeholder="Hey, what's your name?"
                 type="text"
               />
             </div>
             <div className="group">
               <input
                 className="input-item name-input"
-                placeholder="What's your email?"
+                placeholder="What's that contact info? Specifically, Email please."
                 type="text"
               />
             </div>
@@ -53,12 +63,16 @@ export class About extends Component {
             <div className="group">
               <textarea
                 className="textarea-item"
-                placeholder="What do you want to talk about?"
+                placeholder="Code..llamas...potential job? The sky's the limit, let's talk."
                 type="text"
               />
             </div>
           </form>
-          <button className="submit-button" type="submit">
+          <button
+            className="submit-button"
+            type="submit"
+            onClick={this.props.click}
+          >
             Send me some e-mail!
           </button>
         </div>

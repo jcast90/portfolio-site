@@ -1,67 +1,71 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import { About } from './components/About';
 import { Skills } from './components/skills';
-import { pushRotate as Menu } from 'react-burger-menu';
+// import { pushRotate as Menu } from 'react-burger-menu';
 import './App.css';
 import { Projects } from './components/Projects.jsx';
 import { Project } from './components/Project.jsx';
+import { Nav } from './components/Nav';
 
 console.log(Projects);
 class App extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      name: 'Jonathan',
+      email: 'test',
+      message: 'test'
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleChange(key) {
+    return e => this.setState({ [key]: e.target.value });
+  }
+  handleSubmit() {
+    axios
+      .post('http://localhost:8080/contact', {
+        name: this.state.name,
+        email: this.state.email,
+        message: this.state.message
+      })
+      .then(response => {
+        console.log('data sent');
+      });
   }
 
   render() {
     return (
-      <div id="outer-container" className="App">
-        <Menu pageWrapId={'page-wrap'} outerContainerId={'outer-container'}>
-          <a id="home" className="menu-item" href="/">
-            Home
-          </a>
-          <a id="work" className="menu-item" href="#portfolio">
-            Work
-          </a>
-          <a id="about" className="menu-item" href="#skills">
-            Skills
-          </a>
-          <a id="about" className="menu-item" href="#about">
-            About
-          </a>
-          <a id="contact" className="menu-item" href="#about">
-            Contact
-          </a>
-        </Menu>
-        <main id="page-wrap">
-          <div id="hero">
-            <h1>
-              Explore. Learn. Create<span className="shock-value">.</span>
-            </h1>
+      <div className="App">
+        <Nav />
+        <div id="hero">
+          <h1>
+            Explore. Learn. Create<span className="shock-value">.</span>
+          </h1>
+        </div>
+        <div className="diagonal-divs">
+          <div className="banners banner-1">
+            <span>Never Stop Learning and Pushing Bounderies</span>
           </div>
-          <div className="diagonal-divs">
-            <div className="banners banner-1">
-              <span>Never Stop Learning and Pushing Bounderies</span>
-            </div>
+        </div>
+        <div className="portfolio-wrapper" id="portfolio">
+          <h1>
+            My Creations<span className="shock-value">.</span>
+          </h1>
+          <div id="portfolio-cards-wrapper">
+            {Projects.map(project => {
+              return <Project info={project} key={project.title} />;
+            })}
           </div>
-          <div className="portfolio-wrapper" id="portfolio">
-            <h1>
-              My Creations<span className="shock-value">.</span>
-            </h1>
-            <div id="portfolio-cards-wrapper">
-              {Projects.map(project => {
-                return <Project info={project} key={project.title} />;
-              })}
-            </div>
+        </div>
+        <div className="diagonal-divs">
+          <div className="banners banner-2">
+            <span>Never Be Comfortable</span>
           </div>
-          <div className="diagonal-divs">
-            <div className="banners banner-2">
-              <span>Never Be Comfortable</span>
-            </div>
-          </div>
-          <div id="about">
-            <About />
-          </div>
-        </main>
+        </div>
+        <div id="about">
+          <About click={this.handleSubmit} />
+        </div>
       </div>
     );
   }

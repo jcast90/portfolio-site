@@ -45,6 +45,7 @@
     flex-grow: 1;
   }
 }
+
 .hidden {
   display: none;
 }
@@ -52,14 +53,13 @@
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
   &:hover {
-    box-shadow: 0 14px 28px rgba(248, 3, 3, 0.25),
-      0 10px 10px rgba(223, 12, 12, 0.22);
+    box-shadow: 0 19px 38px rgba(248, 3, 3, 0.3),
+      0 15px 12px rgba(223, 12, 12, 0.22);
   }
 }
 
 .transform-position {
   position: static;
-  cursor: ;
 }
 .app-card {
   -webkit-transition: all 2s ease;
@@ -71,6 +71,11 @@
   height: 100%;
   &:hover {
     background-color: rgba(0, 0, 0, 0.5);
+
+    &:after {
+      color: #fff;
+      content: attr(data-parent);
+    }
   }
 }
 .transform-active {
@@ -91,6 +96,39 @@ p {
   -ms-animation: fadein 2s; /* Internet Explorer */
   -o-animation: fadein 2s; /* Opera < 12.1 */
   animation: fadein 2s;
+}
+
+//Flipper
+.flip-container {
+  flex-basis: 80%;
+  height: auto;
+  perspective: 1000px;
+  .flipper.flipped {
+    transform: rotateY(180deg);
+  }
+  .front,
+  .back {
+    flex-basis: 80%;
+    height: auto;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  .front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+    background-color: $brand-shock-color;
+  }
+  .back {
+    transform: rotateY(180deg);
+  }
 }
 
 @keyframes fadein {

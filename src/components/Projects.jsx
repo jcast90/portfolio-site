@@ -1,4 +1,7 @@
 import logo from '../logo.svg';
+import cassini from '../assets/cassini.jpg';
+import fitness from '../assets/fitness.jpg';
+import speakeasy from '../assets/speak-easy.jpg';
 
 export const Projects = [
   {
@@ -12,7 +15,7 @@ export const Projects = [
       site: 'https://serene-everglades-94130.herokuapp.com/',
       github: 'https://github.com/jcast90/speakeasy-react-hackathon'
     },
-    img: './src/assets/speak-easy.jpg'
+    img: speakeasy
   },
   {
     title: 'VSTDA',
@@ -38,7 +41,7 @@ export const Projects = [
       site: 'http://www.cassini.site',
       github: ''
     },
-    img: './src/assets/cassini.jpg'
+    img: cassini
   },
   {
     title: 'Real Results',
@@ -51,6 +54,6 @@ export const Projects = [
       site: 'http://edityourbody.com/',
       github: ''
     },
-    img: './src/assets/fitness.jpg'
+    img: fitness
   }
 ];
