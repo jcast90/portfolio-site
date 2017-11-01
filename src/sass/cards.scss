@@ -125,6 +125,7 @@ p {
     /* for firefox 31 */
     transform: rotateY(0deg);
     background-color: $brand-shock-color;
+    border-radius: 5px;
   }
   .back {
     transform: rotateY(180deg);

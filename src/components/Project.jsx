@@ -85,7 +85,6 @@ export class Project extends Component {
                     <p>{this.props.info.solution}</p>
 
                     <div className="links">
-                      <h2>Links To Check Out</h2>
                       <a href={this.props.info.links.site} target="_blank">
                         Check out the App
                       </a>
