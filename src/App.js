@@ -23,14 +23,20 @@ class App extends Component {
     return e => this.setState({ [key]: e.target.value });
   }
   handleSubmit() {
-    axios
-      .post('http://localhost:8080/contact', {
-        name: this.state.name,
-        email: this.state.email,
-        message: this.state.message
-      })
+    axios({
+      method: 'POST',
+      url: 'http://localhost:8080/contact',
+      data: {
+        name: 'jonathan',
+        email: 'text@text',
+        message: 'testertester'
+      }
+    })
       .then(response => {
         console.log('data sent');
+      })
+      .catch(err => {
+        console.log(err.message);
       });
   }
 

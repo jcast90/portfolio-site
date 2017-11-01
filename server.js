@@ -6,7 +6,7 @@ const app = express();
 const GoogleSpreadsheet = require('google-spreadsheet');
 const async = require('async');
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 const doc = new GoogleSpreadsheet(
   '1Ull9LD2aGGt9p0UEscvYP69IATLcTr6c1boluKT20Rk'
 );
@@ -16,6 +16,14 @@ let newRow;
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept'
+  );
+  next();
+});
 
 // googlesheets= https://sheets.googleapis.com/v4/spreadsheets
 // //instead of using res.send we can use,
@@ -23,9 +31,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.get('/contact', (req, res) => {
 
 // });
+
 app.get('/contact', (req, res) => {
+  res.send('cool');
+});
+
+app.post('/contact', (req, res) => {
   console.log('hello');
-  console.log('req.body', req);
+  console.log('req.body', req.body);
   async.series(
     [
       function setAuth(step) {
@@ -95,11 +108,11 @@ app.get('/contact', (req, res) => {
       if (err) {
         console.log('Error: ' + err);
       } else {
-        console.log('it worked!');
+        res.send('OK');
       }
     }
   );
 });
-app.listen(8080, () => {
+app.listen(PORT, () => {
   console.log(`Server is listening on http://localhost:8080`);
 });
