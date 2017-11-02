@@ -283,7 +283,8 @@ p {
     z-index: 2;
     /* for firefox 31 */
     transform: rotateY(0deg);
-    background-color: #e3170a; }
+    background-color: #e3170a;
+    border-radius: 5px; }
   .flip-container .back {
     transform: rotateY(180deg); }
 
@@ -358,7 +359,6 @@ p {
       height: 150px;
       color: #fff;
       width: 80%;
-      margin-bottom: 3em;
       padding: 15px;
       border: none;
       border-radius: 5px;
@@ -375,8 +375,14 @@ p {
           width: 50%; } }
 
 button.submit-button {
-  height: 20px;
-  width: 30%; }
+  width: 200px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  button.submit-button:hover, button.submit-button:focus {
+    box-shadow: 0 14px 28px rgba(248, 3, 3, 0.25), 0 10px 10px rgba(223, 12, 12, 0.22); }
 
 body {
   font-family: 'Open Sans', sans-serif;

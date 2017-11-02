@@ -7,6 +7,8 @@ const GoogleSpreadsheet = require('google-spreadsheet');
 const async = require('async');
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
 const PORT = process.env.PORT || 8080;
+
+const path = require('path');
 const doc = new GoogleSpreadsheet(
   '1Ull9LD2aGGt9p0UEscvYP69IATLcTr6c1boluKT20Rk'
 );
@@ -16,6 +18,15 @@ let newRow;
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// Serve static assets
+app.use(express.static(path.resolve(__dirname, 'build')));
+
+// Always return the main index.html, so react-router render the route in the client
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+});
+
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   res.header(
@@ -114,5 +125,5 @@ app.post('/contact', (req, res) => {
   );
 });
 app.listen(PORT, () => {
-  console.log(`Server is listening on http://localhost:8080`);
+  console.log(`Server is listening on ${PORT}`);
 });

@@ -25,7 +25,7 @@ class App extends Component {
   handleSubmit() {
     axios({
       method: 'POST',
-      url: 'http://localhost:8080/contact',
+      url: '/contact',
       data: {
         name: 'jonathan',
         email: 'text@text',
