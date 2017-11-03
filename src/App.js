@@ -13,11 +13,12 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'Jonathan',
-      email: 'test',
-      message: 'test'
+      name: '',
+      email: '',
+      message: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
   handleChange(key) {
     return e => this.setState({ [key]: e.target.value });
@@ -27,9 +28,9 @@ class App extends Component {
       method: 'POST',
       url: '/contact',
       data: {
-        name: 'jonathan',
-        email: 'text@text',
-        message: 'testertester'
+        name: this.state.name,
+        email: this.state.email,
+        message: this.state.message
       }
     })
       .then(response => {
@@ -70,7 +71,7 @@ class App extends Component {
           </div>
         </div>
         <div id="about">
-          <About click={this.handleSubmit} />
+          <About click={this.handleSubmit} change={this.handleChange} />
         </div>
       </div>
     );

@@ -50,6 +50,7 @@ export class About extends Component {
                 className="input-item name-input"
                 placeholder="Hey, what's your name?"
                 type="text"
+                onChange={this.props.change('name')}
               />
             </div>
             <div className="group">
@@ -57,6 +58,7 @@ export class About extends Component {
                 className="input-item name-input"
                 placeholder="What's that contact info? Specifically, Email please."
                 type="text"
+                onChange={this.props.change('email')}
               />
             </div>
 
@@ -65,6 +67,7 @@ export class About extends Component {
                 className="textarea-item"
                 placeholder="Code..llamas...potential job? The sky's the limit, let's talk."
                 type="text"
+                onChange={this.props.change('message')}
               />
             </div>
           </form>
