@@ -5,7 +5,7 @@ export class Skills extends Component {
     return (
       <div className="skills-section">
         <header className="App-header">
-          <h1 className="App-title">Skills</h1>
+          <span className="section-title">Skills</span>
         </header>
         <div className="skills-wrapper">
           <span>HTML</span>

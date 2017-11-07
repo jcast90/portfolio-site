@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { About } from './components/About';
+import { Contact } from './components/Contact';
 import { Skills } from './components/skills';
-// import { pushRotate as Menu } from 'react-burger-menu';
 import './App.css';
 import { Projects } from './components/Projects.jsx';
 import { Project } from './components/Project.jsx';
@@ -45,33 +45,64 @@ class App extends Component {
     return (
       <div className="App">
         <Nav />
-        <div id="hero">
-          <h1>
-            Explore. Learn. Create<span className="shock-value">.</span>
-          </h1>
-        </div>
-        <div className="diagonal-divs">
-          <div className="banners banner-1">
-            <span>Never Stop Learning and Pushing Bounderies</span>
+        <div className="parallax">
+          <div id="home" class="parallax__group">
+            <div class="parallax__layer parallax__layer--base">
+              <div class="content">
+                <h1>
+                  Explore. Learn. Create<span className="shock-value">.</span>
+                </h1>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="portfolio-wrapper" id="portfolio">
-          <h1>
-            My Creations<span className="shock-value">.</span>
-          </h1>
-          <div id="portfolio-cards-wrapper">
+          <div class="parallax__group skewUp-banner">
+            <div class="section-title">My Creations</div>
+            <div class="parallax__layer parallax__layer--back">
+              <div class="content">Cool Quote</div>
+            </div>
+          </div>
+          <div className="parallax__group projects">
             {Projects.map(project => {
               return <Project info={project} key={project.title} />;
             })}
           </div>
-        </div>
-        <div className="diagonal-divs">
-          <div className="banners banner-2">
-            <span>Never Be Comfortable</span>
+          <div className="parallax__group skewDown-banner">
+            <div className="parallax__layer parallax__layer--deep">
+              <div className="quote">
+                <span>Never Stop Learning and Pushing Bounderies</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div id="about">
-          <About click={this.handleSubmit} change={this.handleChange} />
+          <div class="parallax__group spacer">
+            <div class="parallax__layer parallax__layer--base" />
+          </div>
+          <div class="parallax__group skewUp-banner">
+            <div class="parrallax__group ">
+              <div class="parallax__layer parallax__layer--back">
+                <div class="content">
+                  <span>Always Be Outside Your Comfort Zone</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="parallax__group spacer">
+            <div class="parallax__layer parallax__layer--base">
+              <div class="content">
+                <Skills />
+              </div>
+            </div>
+          </div>
+          <div class="parallax__group skewDown-banner">
+            <About />
+          </div>
+
+          <div class="parallax__group contact">
+            <div class="parallax__layer parallax__layer--base">
+              <div class="content">
+                <Contact click={this.handleSubmit} change={this.handleChange} />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );

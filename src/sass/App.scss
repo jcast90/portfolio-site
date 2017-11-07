@@ -29,15 +29,6 @@ body {
   }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /***********************************/
 /***** Navigation menu Styling *****/
 /***********************************/
@@ -53,9 +44,13 @@ body {
   @include flex();
 }
 /***********************************/
-/******** Portfolio Styling ********/
+/******** Parallax Styling ********/
 /***********************************/
-
-.skills-wrapper {
-  @include flex();
+.parallax {
+  font-size: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+  -webkit-perspective: 300px;
 }

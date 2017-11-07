@@ -7,6 +7,8 @@ export const Projects = [
   {
     title: 'Hackathon',
     libraries: 'ReactJS / NodeJS/ Spotify API / SASS',
+    summary:
+      'Tasked to build an app in React, I built an app that will generate a spotify playlist and a cocktail based off of the users mood',
     challenge:
       "The most challenging part was the time constraint on this project. With only 72 hours I had to build a fullstack React app with two third-party API's. I use a cocktail API and Spotify's API to create an app that generates a playlist and cocktail based off of the users mood.",
     solution:
@@ -20,6 +22,8 @@ export const Projects = [
   {
     title: 'VSTDA',
     libraries: 'ReactJS / Bootstrap',
+    summary:
+      'Using React, I built a simple to-do app with basic functionality for adding, editing, and deleting to-do items.',
     challenge:
       'For this project, I had to create a simple todo App. It sounded simple enough, however, I needed to build it using React and add specific functionality to it. The main functionality was for the user to be able to add an item, delete an item, and edit an item. This being one of my first React projects, there were a lot of challenges that presented themselves. The main one being how many components do I make and how do I pass the props down to the right component.',
     solution:
@@ -33,6 +37,8 @@ export const Projects = [
   {
     title: 'Cassini: A Responsive Framework',
     libraries: 'HTML / CSS / SASS / JavaScript / jQuery / Gulp',
+    summary:
+      'Bootstrap is too robust for most use cases, so I built a more light weight responsive framework.',
     challenge:
       'This was a class project in which we had to create a responsive framework. The challenge here was figuring out how to create a framework that would be responsive for all devices but also be light weight.',
     solution:
@@ -46,6 +52,8 @@ export const Projects = [
   {
     title: 'Real Results',
     libraries: 'UI/UX / Graphic Design / Custom WordPress / CSS',
+    summary:
+      'A client, who is a personal trainer, had an outdated website and needed a more modern clean look. I delivered a modern, clean design and website for him.',
     challenge:
       'I was approached to re-design a personal trainers website. The challenge was to take his current site and come up with a new modern look and feel for his industry.',
     solution:
