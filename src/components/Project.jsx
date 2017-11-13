@@ -21,11 +21,19 @@ export class Project extends Component {
               <img src={this.props.info.img} />
             </a>
             <div className="links">
-              <a href={this.props.info.links.site} target="_blank">
+              <a
+                className="links"
+                href={this.props.info.links.site}
+                target="_blank"
+              >
                 Check out the App
               </a>
               {this.props.info.links.github.length > 0 ? (
-                <a href={this.props.info.links.github} target="_blank">
+                <a
+                  className="links"
+                  href={this.props.info.links.github}
+                  target="_blank"
+                >
                   Check out the code!
                 </a>
               ) : null}

@@ -1,18 +1,23 @@
 .contact-form-wrapper {
-  margin-bottom: 2em;
+  margin: 4em auto;
+  text-align: center;
+  .section-title {
+    font-size: 3em;
+  }
 }
 .contact-form {
   display: flex;
   justify-content: center;
   align-content: center;
   flex-flow: wrap row;
-  width: 100%;
-  margin-bottom: 3em;
+  width: 100vw;
+  margin: 3em auto;
+  text-align: center;
   .group {
     flex-basis: 100%;
     input {
-      background-color: $brand-secondary;
-      color: $brand-primary;
+      background-color: $brand-primary;
+      color: $brand-secondary;
       height: 50px;
       width: 80%;
       margin-bottom: 2em;
@@ -35,9 +40,9 @@
       }
     }
     .textarea-item {
-      background-color: $brand-secondary;
+      background-color: $brand-primary;
       height: 150px;
-      color: $brand-primary;
+      color: $brand-secondary;
       width: 80%;
       padding: 15px;
       border: none;
@@ -60,15 +65,20 @@
   }
 }
 button.submit-button {
-  width: 200px;
+  width: 250px;
   padding: 15px;
   border: none;
+  font-size: 1em;
   border-radius: 5px;
+  margin-top: 3em;
+  background-color: $banner-turquoise;
+  color: $banner-red;
+  transition: all 0.5s ease;
   // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   // transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  // &:hover,
-  // &:focus {
-  //   box-shadow: 0 14px 28px rgba(248, 3, 3, 0.25),
-  //     0 10px 10px rgba(223, 12, 12, 0.22);
-  // }
+  &:hover,
+  &:focus {
+    transform: scale(1.3);
+    cursor: pointer;
+  }
 }

@@ -43,7 +43,6 @@ body {
   transform: translateZ(-600px) scale(3) skewY(-150deg);
   z-index: 2;
 }
-
 .content,
 .quote {
   text-align: center;
@@ -52,7 +51,6 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-
 #home {
   z-index: 5;
   .parallax__layer--base {
@@ -65,7 +63,7 @@ body {
   justify-content: center;
   align-items: center;
   .parallax__layer--back {
-    background: #ff6961;
+    background: $banner-red;
     .content {
       color: rgba(0, 0, 0, 0.2);
       transform: skewY(-150deg);
@@ -81,9 +79,9 @@ body {
   letter-spacing: 10px;
   text-transform: uppercase;
   color: #fff;
+  text-shadow: 4px 2px 0px $banner-red, 6px 4px 0 $banner-turquoise;
   @media all and (min-width: $screen-md) {
     font-size: 4em;
-    text-shadow: 4px 2px 0px #ff6961, 6px 4px 0 #afeeee;
   }
 }
 .projects {
@@ -92,42 +90,101 @@ body {
   .content {
     text-align: left;
     color: #fff;
+    width: 80%;
     a {
       text-decoration: none;
     }
 
     .title {
-      font-size: 3em;
+      font-size: 2em;
       font-weight: 200;
       text-transform: uppercase;
       color: #fff;
       text-decoration: none;
+
+      @media all and (min-width: $screen-sm) {
+        font-size: 3em;
+      }
+    }
+  }
+  .links {
+    display: flex;
+
+    flex-flow: column wrap;
+
+    a.links {
+      flex-basis: 30%;
+      text-align: center;
+      background-color: $brand-secondary;
+      color: #fff;
+      text-decoration: none;
+      padding: 15px;
+      margin-top: 1em;
+      display: block;
+      border-radius: 5px;
+      width: 200px;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        background-color: $banner-turquoise;
+        color: $banner-red;
+      }
     }
   }
 
   .parallax__group:nth-of-type(odd) {
+    .links {
+      align-items: flex-start;
+    }
     .parallax__layer.parallax__layer--fore {
       background: rgba(0, 0, 0, 0.5);
       width: 100vw;
       color: #fff;
 
+      @media all and (min-width: $screen-sm) {
+        left: 0;
+      }
       @media all and (min-width: $screen-md) {
-        width: 50vw;
-        left: 2em;
+        width: 46vw;
+        left: 6em;
+      }
+      @media all and (min-width: $screen-lg) {
+        left: 8em;
       }
     }
     .parallax__layer--perp {
       position: absolute;
       width: 100vw;
       top: 3em;
+      img:nth-of-type(2) {
+        display: none;
+      }
+      @media all and (min-width: $screen-xs) {
+        top: -7em;
+      }
+      @media all and (min-width: $screen-sm) {
+        top: -12em;
+      }
       @media all and (min-width: $screen-md) {
         padding: 2em;
         top: 3em;
         bottom: 3em;
-        right: 12em;
-        width: 45vw;
+        right: 10em;
+        width: 42vw;
+        text-align: left;
+        img:nth-of-type(2) {
+          display: block;
+        }
+      }
+      @media all and (min-width: $screen-lg) {
+        padding: 2em;
+        top: 3em;
+        bottom: 3em;
+        right: 11em;
+        width: 44vw;
         text-align: left;
       }
+
       img {
         width: 100%;
         height: auto;
@@ -138,6 +195,9 @@ body {
     }
   }
   .parallax__group:nth-of-type(even) {
+    .links {
+      align-items: flex-end;
+    }
     .parallax__layer.parallax__layer--fore {
       width: 100vw;
       background-color: rgba(0, 0, 0, 0.6);
@@ -146,21 +206,43 @@ body {
         top: 0;
         bottom: 0;
         left: initial;
-        right: 2em;
-        width: 50vw;
+        right: 6em;
+        width: 45vw;
+      }
+      @media all and (min-width: $screen-lg) {
+        top: 0;
+        bottom: 0;
+        left: initial;
+        right: 8em;
+        width: 46vw;
       }
     }
     .parallax__layer--perp {
       position: absolute;
       width: 100vw;
-
+      img:nth-of-type(2) {
+        display: none;
+      }
+      @media all and (min-width: $screen-xs) {
+        top: -7em;
+      }
+      @media all and (min-width: $screen-sm) {
+        top: -12em;
+      }
       @media all and (min-width: $screen-md) {
         padding: 2em;
-        width: 45vw;
+        width: 43vw;
         top: 3em;
         bottom: 3em;
-        left: 12em;
+        left: 10em;
         text-align: right;
+        img:nth-of-type(2) {
+          display: block;
+        }
+      }
+      @media all and (min-width: $screen-lg) {
+        width: 43vw;
+        left: 11em;
       }
       img {
         width: 100%;
@@ -177,7 +259,7 @@ body {
   display: flex;
   justify-content: center;
   .parallax__layer--deep {
-    background: #afeeee;
+    background: $banner-turquoise;
     .quote {
       color: rgba(0, 0, 0, 0.2);
       transform: skewY(150deg);
@@ -205,6 +287,148 @@ body {
     background: transparent;
   }
 }
+.about {
+  z-index: 3;
+}
+.about-section {
+  p {
+    text-align: left;
+    line-height: 2em;
+    letter-spacing: 1.4px;
+  }
+  .parallax__layer--fore {
+    width: 100vw;
+    right: 0;
+    top: 9em;
+    left: initial;
+
+    @media all and (min-width: $screen-sm) {
+      width: 42vw;
+      right: 7em;
+      top: 9em;
+      left: initial;
+    }
+    @media all and (min-width: $screen-md) {
+      width: 43vw;
+      right: 8em;
+      top: 9em;
+      left: initial;
+    }
+    @media all and (min-width: $screen-lg) {
+      width: 45vw;
+      right: 9em;
+      top: 9em;
+      left: initial;
+    }
+  }
+  .parallax__layer--perp {
+    background-color: rgba($brand-primary, 0.9);
+    left: 0;
+    width: 100vw;
+    right: initial;
+
+    .content {
+      top: 30%;
+      width: 80%;
+    }
+
+    @media all and (min-width: $screen-sm) {
+      background-color: transparent;
+      left: 6em;
+      width: 65vw;
+      right: initial;
+      .content {
+        width: 70%;
+      }
+    }
+    @media all and (min-width: $screen-md) {
+      left: 10em;
+      width: 55vw;
+      right: initial;
+    }
+    @media all and (min-width: $screen-lg) {
+      left: 12em;
+      width: 55vw;
+      right: initial;
+    }
+  }
+  .image {
+    text-align: center;
+  }
+  img {
+    width: 70%;
+    border-radius: 100%;
+  }
+}
 .contact {
   z-index: 5;
+  background-color: $banner-red;
+}
+.landscape-mode {
+  display: none;
+}
+.skills-section {
+  .content {
+    width: 100%;
+  }
+}
+//landscape media queries
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .landscape-mode {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: url('http://images.mentalfloss.com/sites/default/files/dazedandconfused.jpg?resize=1100x740')
+      no-repeat center center;
+    background-size: cover;
+    h3 {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      padding: 15px;
+    }
+  }
+  .parallax {
+    display: none;
+  }
+}
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .landscape-mode {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: url('http://images.mentalfloss.com/sites/default/files/dazedandconfused.jpg?resize=1100x740')
+      no-repeat center center;
+    background-size: cover;
+    h3 {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      padding: 15px;
+    }
+  }
+  .parallax {
+    display: none;
+  }
+}
+
+//iphone 5 media query
+@media screen and (max-width: 321px) {
+  .projects .parallax__group {
+    img {
+      display: none;
+    }
+    background-color: rgba($brand-secondary, 0.8);
+
+    &:nth-of-type(odd) .parallax__layer.parallax__layer--fore,
+    &:nth-of-type(even) .parallax__layer.parallax__layer--fore {
+      background-color: transparent;
+    }
+  }
 }

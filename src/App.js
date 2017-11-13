@@ -44,26 +44,31 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div className="landscape-mode">
+          <h3>
+            Can you turn your phone around? You'd be a lot cooler if you did.
+          </h3>
+        </div>
         <Nav />
         <div className="parallax">
-          <div id="home" class="parallax__group">
-            <div class="parallax__layer parallax__layer--base">
-              <div class="content">
+          <div id="home" className="parallax__group">
+            <div className="parallax__layer parallax__layer--base">
+              <div className="content">
                 <h1>
                   Explore. Learn. Create<span className="shock-value">.</span>
                 </h1>
               </div>
             </div>
           </div>
-          <div class="parallax__group skewUp-banner">
-            <div class="section-title">My Creations</div>
-            <div class="parallax__layer parallax__layer--back">
-              <div class="content">Cool Quote</div>
+          <div className="parallax__group skewUp-banner">
+            <div className="section-title">My Creations</div>
+            <div className="parallax__layer parallax__layer--back">
+              <div className="content">Cool Quote</div>
             </div>
           </div>
           <div className="parallax__group projects">
-            {Projects.map(project => {
-              return <Project info={project} key={project.title} />;
+            {Projects.map((project, index) => {
+              return <Project info={project} key={index} />;
             })}
           </div>
           <div className="parallax__group skewDown-banner">
@@ -73,34 +78,30 @@ class App extends Component {
               </div>
             </div>
           </div>
-          <div class="parallax__group spacer">
-            <div class="parallax__layer parallax__layer--base" />
+          <div className="parallax__group spacer">
+            <div className="parallax__layer parallax__layer--base" />
           </div>
-          <div class="parallax__group skewUp-banner">
-            <div class="parrallax__group ">
-              <div class="parallax__layer parallax__layer--back">
-                <div class="content">
+          <div className="parallax__group skewUp-banner">
+            <div className="parrallax__group ">
+              <div className="parallax__layer parallax__layer--back">
+                <div className="content">
                   <span>Always Be Outside Your Comfort Zone</span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="parallax__group spacer">
-            <div class="parallax__layer parallax__layer--base">
-              <div class="content">
-                <Skills />
-              </div>
+          <div className="parallax__group spacer">
+            <div className="parallax__layer parallax__layer--base">
+              <Skills />
             </div>
           </div>
-          <div class="parallax__group skewDown-banner">
+          <div className="parallax__group skewDown-banner about">
             <About />
           </div>
 
-          <div class="parallax__group contact">
-            <div class="parallax__layer parallax__layer--base">
-              <div class="content">
-                <Contact click={this.handleSubmit} change={this.handleChange} />
-              </div>
+          <div className="parallax__group contact">
+            <div className="parallax__layer parallax__layer--base">
+              <Contact click={this.handleSubmit} change={this.handleChange} />
             </div>
           </div>
         </div>
