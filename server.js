@@ -44,12 +44,21 @@ app.use(function(req, res, next) {
 // });
 
 app.get('/contact', (req, res) => {
-  res.send('cool');
+  res.send('OK');
 });
 
 app.post('/contact', (req, res) => {
-  console.log('hello');
-  console.log('req.body', req.body);
+  const accountSid = 'AC511a4b8c5f46aa0af18fb4d84ab7f334';
+  const authToken = 'e3b0b09b87d309c7fc52392f11456202';
+  const TwilioClient = twilio(accountSid, authToken);
+
+  TwilioClient.messages
+    .create({
+      to: '+18707611772',
+      from: '+18705659113',
+      body: req.body.firstName + ' says hello!'
+    })
+    .then(message => console.log(message.sid));
   async.series(
     [
       function setAuth(step) {
@@ -61,16 +70,16 @@ app.post('/contact', (req, res) => {
       },
       function getInfoAndWorksheets(step) {
         doc.getInfo(function(err, info) {
-          console.log('Loaded doc: ' + info.title + ' by ' + info.author.email);
+          // console.log('Loaded doc: ' + info.title + ' by ' + info.author.email);
           sheet = info.worksheets[0];
-          console.log(
-            'sheet 1: ' +
-              sheet.title +
-              ' ' +
-              sheet.rowCount +
-              'x' +
-              sheet.colCount
-          );
+          // console.log(
+          //   'sheet 1: ' +
+          //     sheet.title +
+          //     ' ' +
+          //     sheet.rowCount +
+          //     'x' +
+          //     sheet.colCount
+          // );
           step();
         });
       },
@@ -83,7 +92,7 @@ app.post('/contact', (req, res) => {
             orderby: 'name'
           },
           function(err, row) {
-            console.log('Read ' + row.length + ' rows');
+            // console.log('Read ' + row.length + ' rows');
             newRow = row.length;
             step();
           }
@@ -98,9 +107,9 @@ app.post('/contact', (req, res) => {
           },
           function(err, cells) {
             var cell = cells[0];
-            console.log(
-              'Cell R' + cell.row + 'C' + cell.col + ' = ' + cell.value
-            );
+            // console.log(
+            //   'Cell R' + cell.row + 'C' + cell.col + ' = ' + cell.value
+            // );
 
             // // bulk updates make it easy to update many cells at once
             // req.body.name

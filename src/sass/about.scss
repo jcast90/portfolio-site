@@ -6,30 +6,101 @@
   .about-item {
     flex-basis: 100%;
 
-    @media all and (min-width: 900px){
+    @media all and (min-width: 900px) {
       flex-basis: 40%;
     }
-    p{
+    p {
       line-height: 2em;
-      text-align:left;
+      text-align: left;
       font-weight: 600;
       padding: 15px;
     }
   }
-  .image{
-    img{
+  .image {
+    img {
       height: auto;
       width: 80%;
       margin: 2em;
-      box-shadow: 1px 18px 19px rgba(0,0,0,0.3);
-      transition: all .3s ease-in-out; 
-  
-      &:hover{
+      box-shadow: 1px 18px 19px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
         transform: scale(0.9);
-        box-shadow: 0px 10px 10px rgba(0,0,0,0.8);
-        
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.8);
       }
     }
-    
+  }
+}
+.about {
+  z-index: 3;
+}
+.about-section {
+  p {
+    text-align: left;
+    line-height: 2em;
+    letter-spacing: 1.4px;
+  }
+  .parallax__layer--fore {
+    width: 100vw;
+    right: 0;
+    top: 9em;
+    left: initial;
+
+    @media all and (min-width: $screen-sm) {
+      width: 42vw;
+      right: 7em;
+      top: 9em;
+      left: initial;
+    }
+    @media all and (min-width: $screen-md) {
+      width: 43vw;
+      right: 8em;
+      top: 9em;
+      left: initial;
+    }
+    @media all and (min-width: $screen-lg) {
+      width: 45vw;
+      right: 9em;
+      top: 9em;
+      left: initial;
+    }
+  }
+  .parallax__layer--perp {
+    background-color: rgba($brand-primary, 0.9);
+    left: 0;
+    width: 100vw;
+    right: initial;
+
+    .content {
+      top: 30%;
+      width: 80%;
+    }
+
+    @media all and (min-width: $screen-sm) {
+      background-color: transparent;
+      left: 4em;
+      width: 65vw;
+      right: initial;
+      .content {
+        width: 70%;
+      }
+    }
+    @media all and (min-width: $screen-md) {
+      left: 10em;
+      width: 55vw;
+      right: initial;
+    }
+    @media all and (min-width: $screen-lg) {
+      left: 12em;
+      width: 55vw;
+      right: initial;
+    }
+  }
+  .image {
+    text-align: center;
+  }
+  img {
+    width: 70%;
+    border-radius: 100%;
   }
 }

@@ -1,0 +1,43 @@
+.skewUp-banner {
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .parallax__layer--back {
+    background: $banner-red;
+    .content {
+      color: rgba(0, 0, 0, 0.2);
+      transform: skewY(-150deg);
+      font-size: 3em;
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+.skewDown-banner {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  .parallax__layer--deep {
+    background: $banner-turquoise;
+    .quote {
+      color: rgba(0, 0, 0, 0.2);
+      transform: skewY(150deg);
+      font-size: 3em;
+      left: 0;
+      width: 100%;
+    }
+  }
+  .parallax__layer--back {
+    transform: translateZ(-300px) scale(2) skewY(0);
+  }
+  .parallax__layer {
+    flex-basis: 30%;
+  }
+}
+.spacer {
+  z-index: 3;
+  .parallax__layer--base {
+    background: transparent;
+  }
+}

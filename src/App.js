@@ -90,11 +90,7 @@ class App extends Component {
               </div>
             </div>
           </div>
-          <div className="parallax__group spacer">
-            <div className="parallax__layer parallax__layer--base">
-              <Skills />
-            </div>
-          </div>
+
           <div className="parallax__group skewDown-banner about">
             <About />
           </div>

@@ -19,7 +19,7 @@ export class Contact extends Component {
           <div className="group">
             <input
               className="input-item name-input"
-              placeholder="What's that contact info? Specifically, Email please."
+              placeholder="What's your email address?"
               type="text"
               onChange={this.props.change('email')}
             />
@@ -28,7 +28,7 @@ export class Contact extends Component {
           <div className="group">
             <textarea
               className="textarea-item"
-              placeholder="Code..llamas...potential job? The sky's the limit, let's talk."
+              placeholder="What do you want to talk about?"
               type="text"
               onChange={this.props.change('message')}
             />

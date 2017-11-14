@@ -3,54 +3,42 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
 }
-
-.App {
-  text-align: center;
-  h1 {
-    font-weight: $bold;
-    .shock-value {
-      color: $brand-shock-color;
-      margin-right: 5px;
-    }
+#home {
+  z-index: 5;
+  .parallax__layer--base {
+    background: rgb(255, 255, 255);
+  }
+  .shock-value {
+    color: $brand-shock-color;
+    margin-right: 5px;
   }
   .light-text {
     font-weight: $light;
     display: block;
     color: rgba(0, 0, 0, 0.2);
   }
-  .App-title {
-    font-size: 1.5em;
-    display: block;
-    flex-basis: 100%;
-  }
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px;
-  }
 }
 
-/***********************************/
-/***** Navigation menu Styling *****/
-/***********************************/
-
-/* Position and sizing of burger button */
-
-/***********************************/
-/******** Hero Image Styling *******/
-/***********************************/
-#hero {
-  height: 100vh;
-  width: 100vw;
-  @include flex();
+.section-title {
+  font-size: 2em;
+  text-align: center;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 4px 2px 0px $banner-red, 6px 4px 0 $banner-turquoise;
+  @media all and (min-width: $screen-md) {
+    font-size: 4em;
+  }
 }
-/***********************************/
-/******** Parallax Styling ********/
-/***********************************/
-.parallax {
-  font-size: 100%;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  perspective: 300px;
-  -webkit-perspective: 300px;
+// .App-logo {
+//   animation: App-logo-spin infinite 20s linear;
+//   height: 80px;
+// }
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

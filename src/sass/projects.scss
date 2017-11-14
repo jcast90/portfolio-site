@@ -1,0 +1,170 @@
+.projects {
+  z-index: 4;
+
+  .content {
+    text-align: left;
+    color: #fff;
+    width: 80%;
+    a {
+      text-decoration: none;
+    }
+
+    .title {
+      font-size: 2em;
+      font-weight: 200;
+      text-transform: uppercase;
+      color: #fff;
+      text-decoration: none;
+
+      @media all and (min-width: $screen-sm) {
+        font-size: 3em;
+      }
+    }
+  }
+  .links {
+    display: flex;
+
+    flex-flow: column wrap;
+
+    a.links {
+      flex-basis: 30%;
+      text-align: center;
+      background-color: $brand-secondary;
+      color: #fff;
+      text-decoration: none;
+      padding: 15px;
+      margin-top: 1em;
+      display: block;
+      border-radius: 5px;
+      width: 200px;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        background-color: $banner-turquoise;
+        color: $banner-red;
+      }
+    }
+  }
+
+  .parallax__group:nth-of-type(odd) {
+    .links {
+      align-items: flex-start;
+    }
+    .parallax__layer.parallax__layer--fore {
+      background: rgba(0, 0, 0, 0.5);
+      width: 100vw;
+      color: #fff;
+
+      @media all and (min-width: $screen-sm) {
+        left: 0;
+      }
+      @media all and (min-width: $screen-md) {
+        width: 46vw;
+        left: 6em;
+      }
+      @media all and (min-width: $screen-lg) {
+        left: 8em;
+      }
+    }
+    .parallax__layer--perp {
+      position: absolute;
+      width: 100vw;
+      top: 3em;
+      img:nth-of-type(2) {
+        display: none;
+      }
+      @media all and (min-width: $screen-xs) {
+        top: -7em;
+      }
+      @media all and (min-width: $screen-sm) {
+        top: -12em;
+      }
+      @media all and (min-width: $screen-md) {
+        padding: 2em;
+        top: 3em;
+        bottom: 3em;
+        right: 10em;
+        width: 42vw;
+        text-align: left;
+        img:nth-of-type(2) {
+          display: block;
+        }
+      }
+      @media all and (min-width: $screen-lg) {
+        padding: 2em;
+        top: 3em;
+        bottom: 3em;
+        right: 11em;
+        width: 44vw;
+        text-align: left;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .parallax__layer--base {
+      background: transparent;
+    }
+  }
+  .parallax__group:nth-of-type(even) {
+    .links {
+      align-items: flex-end;
+    }
+    .parallax__layer.parallax__layer--fore {
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.6);
+
+      @media all and (min-width: $screen-md) {
+        top: 0;
+        bottom: 0;
+        left: initial;
+        right: 6em;
+        width: 45vw;
+      }
+      @media all and (min-width: $screen-lg) {
+        top: 0;
+        bottom: 0;
+        left: initial;
+        right: 8em;
+        width: 46vw;
+      }
+    }
+    .parallax__layer--perp {
+      position: absolute;
+      width: 100vw;
+      img:nth-of-type(2) {
+        display: none;
+      }
+      @media all and (min-width: $screen-xs) {
+        top: -7em;
+      }
+      @media all and (min-width: $screen-sm) {
+        top: -12em;
+      }
+      @media all and (min-width: $screen-md) {
+        padding: 2em;
+        width: 43vw;
+        top: 3em;
+        bottom: 3em;
+        left: 10em;
+        text-align: right;
+        img:nth-of-type(2) {
+          display: block;
+        }
+      }
+      @media all and (min-width: $screen-lg) {
+        width: 43vw;
+        left: 11em;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .parallax__layer--base {
+      background: transparent;
+    }
+  }
+}
