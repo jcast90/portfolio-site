@@ -27,7 +27,6 @@ class App extends Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    console.log(e);
     axios({
       method: 'POST',
       url: '/contact',
