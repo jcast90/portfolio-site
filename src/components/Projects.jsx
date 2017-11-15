@@ -1,7 +1,7 @@
 import vstda from '../assets/vstda.jpg';
 import vstdaAdded from '../assets/vstda-added.jpg';
 import cassini from '../assets/cassini.jpg';
-import cassiniInside from '../assets/cassiniInside.jpg';
+import cassiniLower from '../assets/cassiniLower.jpg';
 import fitness from '../assets/fitness.jpg';
 import realResults from '../assets/realResultsHome.jpg';
 import speakeasy from '../assets/speak-easy.jpg';
@@ -54,7 +54,7 @@ export const Projects = [
       github: ''
     },
     img: cassini,
-    img2: cassiniInside
+    img2: cassiniLower
   },
   {
     title: 'Real Results',
