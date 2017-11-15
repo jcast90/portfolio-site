@@ -246,18 +246,26 @@ body {
     .projects .links a.links {
       flex-basis: 30%;
       text-align: center;
-      background-color: #2e2f2f;
-      color: #fff;
       text-decoration: none;
       padding: 15px;
       margin-top: 1em;
       display: block;
       border-radius: 5px;
       width: 200px;
-      transition: all 0.5s ease-in-out; }
+      transition: all 0.5s ease-in-out;
+      background-color: #afeeee; }
       .projects .links a.links:hover {
-        background-color: #afeeee;
-        color: #ff6961; }
+        background-color: #ff6961;
+        color: #afeeee;
+        border: 1px solid #ff6961; }
+      @media all and (min-width: 768px) {
+        .projects .links a.links {
+          background-color: #2e2f2f;
+          color: #fff; }
+          .projects .links a.links:hover {
+            background-color: #afeeee;
+            color: #ff6961;
+            border: 1px solid #ff6961; } }
   .projects .parallax__group:nth-of-type(odd) .links {
     align-items: flex-start; }
   .projects .parallax__group:nth-of-type(odd) .parallax__layer.parallax__layer--fore {
@@ -278,14 +286,17 @@ body {
     position: absolute;
     width: 100vw;
     top: 3em; }
-    .projects .parallax__group:nth-of-type(odd) .parallax__layer--perp img:nth-of-type(2) {
+    .projects .parallax__group:nth-of-type(odd) .parallax__layer--perp img {
       display: none; }
-    @media all and (min-width: 375px) {
+    @media all and (max-width: 414px) {
       .projects .parallax__group:nth-of-type(odd) .parallax__layer--perp {
         top: -7em; } }
     @media all and (min-width: 768px) {
       .projects .parallax__group:nth-of-type(odd) .parallax__layer--perp {
-        top: -12em; } }
+        top: -12em; }
+        .projects .parallax__group:nth-of-type(odd) .parallax__layer--perp img:nth-of-type(1) {
+          display: block;
+          margin-bottom: 0.4em; } }
     @media all and (min-width: 1024px) {
       .projects .parallax__group:nth-of-type(odd) .parallax__layer--perp {
         padding: 2em;
@@ -306,7 +317,8 @@ body {
         text-align: left; } }
     .projects .parallax__group:nth-of-type(odd) .parallax__layer--perp img {
       width: 100%;
-      height: auto; }
+      height: auto;
+      margin-bottom: 0.4em; }
   .projects .parallax__group:nth-of-type(odd) .parallax__layer--base {
     background: transparent; }
   .projects .parallax__group:nth-of-type(even) .links {
@@ -331,14 +343,17 @@ body {
   .projects .parallax__group:nth-of-type(even) .parallax__layer--perp {
     position: absolute;
     width: 100vw; }
-    .projects .parallax__group:nth-of-type(even) .parallax__layer--perp img:nth-of-type(2) {
+    .projects .parallax__group:nth-of-type(even) .parallax__layer--perp img {
       display: none; }
-    @media all and (min-width: 375px) {
+    @media all and (max-width: 414px) {
       .projects .parallax__group:nth-of-type(even) .parallax__layer--perp {
         top: -7em; } }
     @media all and (min-width: 768px) {
       .projects .parallax__group:nth-of-type(even) .parallax__layer--perp {
-        top: -12em; } }
+        top: -12em; }
+        .projects .parallax__group:nth-of-type(even) .parallax__layer--perp img:nth-of-type(1) {
+          display: block;
+          margin-bottom: 0.4em; } }
     @media all and (min-width: 1024px) {
       .projects .parallax__group:nth-of-type(even) .parallax__layer--perp {
         padding: 2em;
@@ -348,7 +363,8 @@ body {
         left: 10em;
         text-align: right; }
         .projects .parallax__group:nth-of-type(even) .parallax__layer--perp img:nth-of-type(2) {
-          display: block; } }
+          display: block;
+          margin-bottom: 0.4em; } }
     @media all and (min-width: 1240px) {
       .projects .parallax__group:nth-of-type(even) .parallax__layer--perp {
         width: 43vw;
@@ -359,7 +375,8 @@ body {
         left: 13em; } }
     .projects .parallax__group:nth-of-type(even) .parallax__layer--perp img {
       width: 100%;
-      height: auto; }
+      height: auto;
+      margin-bottom: 0.4em; }
   .projects .parallax__group:nth-of-type(even) .parallax__layer--base {
     background: transparent; }
 
@@ -476,6 +493,10 @@ body {
   line-height: 2em;
   letter-spacing: 1.4px; }
 
+@media all and (max-width: 414px) {
+  .about-section .section-title {
+    margin-top: 2em; } }
+
 .about-section .parallax__layer--fore {
   width: 100vw;
   right: 0;
@@ -557,8 +578,14 @@ body {
   align-content: center;
   flex-flow: wrap row;
   width: 100vw;
-  margin: 3em auto;
+  margin: 0 auto;
   text-align: center; }
+  @media all and (max-width: 414px) {
+    .contact-form {
+      margin-top: 3em; } }
+  @media all and (min-width: 768px) {
+    .contact-form {
+      margin: 3em auto; } }
   .contact-form .group {
     flex-basis: 100%; }
     .contact-form .group input {
@@ -573,7 +600,10 @@ body {
       outline: none;
       text-align: center;
       font-size: 1.2em; }
-      @media all and (min-width: 700px) {
+      @media all and (max-width: 414px) {
+        .contact-form .group input {
+          padding: 0; } }
+      @media all and (min-width: 1024px) {
         .contact-form .group input {
           width: 50%; } }
     .contact-form .group .textarea-item {
@@ -685,7 +715,7 @@ body {
   .parallax {
     display: none; } }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 414px) {
   .projects .parallax__group {
     background-color: rgba(46, 47, 47, 0.8); }
     .projects .parallax__group img {

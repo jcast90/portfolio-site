@@ -61,7 +61,7 @@
 }
 
 //iphone 5 media query
-@media screen and (max-width: 321px) {
+@media screen and (max-width: $screen-xs) {
   .projects .parallax__group {
     img {
       display: none;

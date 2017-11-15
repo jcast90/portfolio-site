@@ -20,8 +20,14 @@
   align-content: center;
   flex-flow: wrap row;
   width: 100vw;
-  margin: 3em auto;
+  margin: 0 auto;
   text-align: center;
+  @media all and (max-width: $screen-xs) {
+    margin-top: 3em;
+  }
+  @media all and (min-width: $screen-sm) {
+    margin: 3em auto;
+  }
   .group {
     flex-basis: 100%;
     input {
@@ -36,8 +42,10 @@
       outline: none;
       text-align: center;
       font-size: 1.2em;
-
-      @media all and (min-width: 700px) {
+      @media all and (max-width: $screen-xs) {
+        padding: 0;
+      }
+      @media all and (min-width: $screen-md) {
         width: 50%;
       }
     }

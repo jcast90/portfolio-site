@@ -7,7 +7,7 @@ const app = express();
 const GoogleSpreadsheet = require('google-spreadsheet');
 const async = require('async');
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 8080;
 
 const path = require('path');
 const doc = new GoogleSpreadsheet(

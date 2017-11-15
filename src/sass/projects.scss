@@ -23,14 +23,11 @@
   }
   .links {
     display: flex;
-
     flex-flow: column wrap;
 
     a.links {
       flex-basis: 30%;
       text-align: center;
-      background-color: $brand-secondary;
-      color: #fff;
       text-decoration: none;
       padding: 15px;
       margin-top: 1em;
@@ -38,10 +35,21 @@
       border-radius: 5px;
       width: 200px;
       transition: all 0.5s ease-in-out;
+      background-color: $banner-turquoise;
 
       &:hover {
-        background-color: $banner-turquoise;
-        color: $banner-red;
+        background-color: $banner-red;
+        color: $banner-turquoise;
+        border: 1px solid $banner-red;
+      }
+      @media all and (min-width: $screen-sm) {
+        background-color: $brand-secondary;
+        color: #fff;
+        &:hover {
+          background-color: $banner-turquoise;
+          color: $banner-red;
+          border: 1px solid $banner-red;
+        }
       }
     }
   }
@@ -70,14 +78,18 @@
       position: absolute;
       width: 100vw;
       top: 3em;
-      img:nth-of-type(2) {
+      img {
         display: none;
       }
-      @media all and (min-width: $screen-xs) {
+      @media all and (max-width: $screen-xs) {
         top: -7em;
       }
       @media all and (min-width: $screen-sm) {
         top: -12em;
+        img:nth-of-type(1) {
+          display: block;
+          margin-bottom: 0.4em;
+        }
       }
       @media all and (min-width: $screen-md) {
         padding: 2em;
@@ -102,6 +114,7 @@
       img {
         width: 100%;
         height: auto;
+        margin-bottom: 0.4em;
       }
     }
     .parallax__layer--base {
@@ -134,14 +147,18 @@
     .parallax__layer--perp {
       position: absolute;
       width: 100vw;
-      img:nth-of-type(2) {
+      img {
         display: none;
       }
-      @media all and (min-width: $screen-xs) {
+      @media all and (max-width: $screen-xs) {
         top: -7em;
       }
       @media all and (min-width: $screen-sm) {
         top: -12em;
+        img:nth-of-type(1) {
+          display: block;
+          margin-bottom: 0.4em;
+        }
       }
       @media all and (min-width: $screen-md) {
         padding: 2em;
@@ -152,6 +169,7 @@
         text-align: right;
         img:nth-of-type(2) {
           display: block;
+          margin-bottom: 0.4em;
         }
       }
       @media all and (min-width: $screen-lg) {
@@ -165,6 +183,7 @@
       img {
         width: 100%;
         height: auto;
+        margin-bottom: 0.4em;
       }
     }
     .parallax__layer--base {
