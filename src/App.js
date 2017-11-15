@@ -77,7 +77,7 @@ class App extends Component {
           <div className="parallax__group skewUp-banner">
             <div className="section-title">My Creations</div>
             <div className="parallax__layer parallax__layer--back">
-              <div className="content">Cool Quote</div>
+              <div className="content">Everything is under CTRL</div>
             </div>
           </div>
           <div id="work" className="parallax__group projects">
