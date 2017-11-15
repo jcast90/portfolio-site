@@ -73,7 +73,7 @@ export class Nav extends Component {
               About
             </a>
             <a href="#contact" onClick={this.changeNavState}>
-              contact
+              Contact
             </a>
           </div>
         </div>

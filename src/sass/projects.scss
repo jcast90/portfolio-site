@@ -158,6 +158,10 @@
         width: 43vw;
         left: 11em;
       }
+      @media all and (min-width: $screen-xl) {
+        width: 43vw;
+        left: 13em;
+      }
       img {
         width: 100%;
         height: auto;

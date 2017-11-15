@@ -18,7 +18,7 @@ export class Project extends Component {
           <div className="image">
             <a href={this.props.info.links.site} target="_blank">
               <img src={this.props.info.img} />
-              <img src={this.props.info.img} />
+              <img src={this.props.info.img2} />
             </a>
             <div className="links">
               <a

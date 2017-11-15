@@ -3,12 +3,17 @@
   background-color: $banner-red;
 }
 .contact-form-wrapper {
-  margin: 4em auto;
   text-align: center;
   .section-title {
     font-size: 3em;
   }
+  @media all and (min-width: $screen-sm) {
+    margin: 4em auto;
+  }
 }
+//add background-color to projects on mobile below iphone 6
+//fix links on images from overflowing below iphone 6
+//todo: change margin:3em for mobile
 .contact-form {
   display: flex;
   justify-content: center;
@@ -31,14 +36,7 @@
       outline: none;
       text-align: center;
       font-size: 1.2em;
-      // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      // transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-      // caret-color: rgb(223, 12, 12);
-      // &:hover,
-      // &:focus {
-      //   box-shadow: 0 14px 28px rgba(248, 3, 3, 0.25),
-      //     0 10px 10px rgba(223, 12, 12, 0.22);
-      // }
+
       @media all and (min-width: 700px) {
         width: 50%;
       }
@@ -54,14 +52,7 @@
       outline: none;
       text-align: center;
       font-size: 1.2em;
-      // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      // transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-      // caret-color: rgb(223, 12, 12);
-      // &:hover,
-      // &:focus {
-      //   box-shadow: 0 14px 28px rgba(248, 3, 3, 0.25),
-      //     0 10px 10px rgba(223, 12, 12, 0.22);
-      // }
+
       @media all and (min-width: 700px) {
         width: 50%;
       }
@@ -74,12 +65,11 @@ button.submit-button {
   border: none;
   font-size: 1em;
   border-radius: 5px;
-  margin-top: 3em;
+  margin-top: 2em;
   background-color: $banner-turquoise;
   color: $banner-red;
   transition: all 0.5s ease;
-  // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  // transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
   &:hover,
   &:focus {
     transform: scale(1.3);

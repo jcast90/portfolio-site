@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const twilio = require('twilio');
 const profile = require('./profile');
 const app = express();
 const GoogleSpreadsheet = require('google-spreadsheet');
@@ -48,22 +49,23 @@ app.get('/contact', (req, res) => {
 });
 
 app.post('/contact', (req, res) => {
-  const accountSid = 'AC511a4b8c5f46aa0af18fb4d84ab7f334';
-  const authToken = 'e3b0b09b87d309c7fc52392f11456202';
-  const TwilioClient = twilio(accountSid, authToken);
+  const twilioCreds = require('./src/credentials/twilio-credentials.json');
+
+  const TwilioClient = twilio(twilioCreds.accountSid, twilioCreds.authToken);
 
   TwilioClient.messages
     .create({
       to: '+18707611772',
       from: '+18705659113',
-      body: req.body.firstName + ' says hello!'
+      body: req.body.name + ' says ' + req.body.message
     })
     .then(message => console.log(message.sid));
+
   async.series(
     [
       function setAuth(step) {
         // see notes below for authentication instructions!
-        var creds = require('./src/google-key/google-api-key.json');
+        var creds = require('./src/credentials/google-api-key.json');
         // OR, if you cannot save the file locally (like on heroku)
 
         doc.useServiceAccountAuth(creds, step);

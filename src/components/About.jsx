@@ -24,13 +24,18 @@ export class About extends Component {
         <div className="parallax__layer parallax__layer--perp">
           <div className="content">
             <p>
-              For the past couple of years I have been teaching myself to code,
-              from building static HTML sites to React applications. I have
-              definitely struggled and learned the importance of persistence,
-              problem solving, and even more so, patience. I am always learning
-              new technologies, new programming languages, frameworks, and even
-              new recipes in the kitchen.
+              Born in Alabama, raised in Uruguay. When I'm not coding I'm
+              cooking, in fact, I was trained as a chef before I found my
+              passion for coding. Also, sometimes I have a mohawk.
             </p>
+            <span> Some Things I'm Good At:</span>
+            <ul>
+              <li>JS ES6</li>
+              <li>React</li>
+              <li>Node</li>
+              <li>Sass</li>
+              <li>& more...</li>
+            </ul>
           </div>
         </div>
       </div>

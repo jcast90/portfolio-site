@@ -15,15 +15,19 @@ class App extends Component {
     this.state = {
       name: '',
       email: '',
-      message: ''
+      message: '',
+      status: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.renderThankYou = this.renderThankYou.bind(this);
   }
   handleChange(key) {
     return e => this.setState({ [key]: e.target.value });
   }
-  handleSubmit() {
+  handleSubmit(e) {
+    e.preventDefault();
+    console.log(e);
     axios({
       method: 'POST',
       url: '/contact',
@@ -34,13 +38,24 @@ class App extends Component {
       }
     })
       .then(response => {
-        console.log('data sent');
+        console.log('Thank you, your data has been sent! :)');
       })
       .catch(err => {
         console.log(err.message);
       });
+    this.setState({
+      status: '200'
+    });
   }
-
+  renderThankYou() {
+    return (
+      <div className="thanks">
+        <div className="content">
+          <span className="section-title">Thanks. Chat Soon!</span>
+        </div>
+      </div>
+    );
+  }
   render() {
     return (
       <div className="App">
@@ -66,7 +81,7 @@ class App extends Component {
               <div className="content">Cool Quote</div>
             </div>
           </div>
-          <div className="parallax__group projects">
+          <div id="work" className="parallax__group projects">
             {Projects.map((project, index) => {
               return <Project info={project} key={index} />;
             })}
@@ -91,13 +106,17 @@ class App extends Component {
             </div>
           </div>
 
-          <div className="parallax__group skewDown-banner about">
+          <div id="about" className="parallax__group skewDown-banner about">
             <About />
           </div>
 
-          <div className="parallax__group contact">
+          <div id="contact" className="parallax__group contact">
             <div className="parallax__layer parallax__layer--base">
-              <Contact click={this.handleSubmit} change={this.handleChange} />
+              {this.state.status === '200' ? (
+                this.renderThankYou()
+              ) : (
+                <Contact click={this.handleSubmit} change={this.handleChange} />
+              )}
             </div>
           </div>
         </div>

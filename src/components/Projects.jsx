@@ -1,7 +1,11 @@
-import logo from '../logo.svg';
+import vstda from '../assets/vstda.jpg';
+import vstdaAdded from '../assets/vstda-added.jpg';
 import cassini from '../assets/cassini.jpg';
+import cassiniInside from '../assets/cassiniInside.jpg';
 import fitness from '../assets/fitness.jpg';
+import realResults from '../assets/realResultsHome.jpg';
 import speakeasy from '../assets/speak-easy.jpg';
+import speakeasyDrink from '../assets/speakeasy2.jpg';
 
 export const Projects = [
   {
@@ -17,7 +21,8 @@ export const Projects = [
       site: 'https://serene-everglades-94130.herokuapp.com/',
       github: 'https://github.com/jcast90/speakeasy-react-hackathon'
     },
-    img: speakeasy
+    img: speakeasy,
+    img2: speakeasyDrink
   },
   {
     title: 'VSTDA',
@@ -29,10 +34,11 @@ export const Projects = [
     solution:
       'Although there was a lot of struggle on this project, I definitely learned a lot about React. My first mistake was trying to break it down into way too many components, I had to take a step back and compile it down to fewer components. Another topic I became familiar with was how states and props work with several components and how to properly pass them down. Overall this was a fun project to work with and helped me understand the world of React a lot more.',
     links: {
-      site: 'http://edityourbody.com/',
+      site: 'https://desolate-stream-60822.herokuapp.com/',
       github: 'https://github.com/jcast90/startnow-react100-vstda'
     },
-    img: logo
+    img: vstda,
+    img2: vstdaAdded
   },
   {
     title: 'Cassini: A Responsive Framework',
@@ -47,7 +53,8 @@ export const Projects = [
       site: 'http://www.cassini.site',
       github: ''
     },
-    img: cassini
+    img: cassini,
+    img2: cassiniInside
   },
   {
     title: 'Real Results',
@@ -62,6 +69,7 @@ export const Projects = [
       site: 'http://edityourbody.com/',
       github: ''
     },
-    img: fitness
+    img: fitness,
+    img2: realResults
   }
 ];

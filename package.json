@@ -1,5 +1,10 @@
 {
   "name": "portfolio-site",
+  "proxy": {
+    "/contact": {
+      "target": "http://localhost:8080"
+    }
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,11 +23,13 @@
     "react-chartjs-2": "^2.6.4",
     "react-dom": "^16.0.0",
     "react-scripts": "1.0.14",
+    "twilio": "^3.9.3",
     "webpack": "^3.8.1"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/styles -o src",
-    "watch-css": "npm run build-css && node-sass-chokidar src/styles -o src --watch --recursive",
+    "watch-css":
+      "npm run build-css && node-sass-chokidar src/styles -o src --watch --recursive",
     "start-js": "react-scripts start",
     "start": "npm run build && node server.js",
     "dev": "npm-run-all -p watch-css start-js",
