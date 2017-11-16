@@ -38,10 +38,12 @@ export class Nav extends Component {
         );
   }
   openNav() {
-    this.state.closed === false ? this.setState({ width: '100%' }) : null;
+    return this.state.closed === false
+      ? this.setState({ width: '100%' })
+      : null;
   }
   closeNav() {
-    this.state.closed === true ? this.setState({ width: '0%' }) : null;
+    return this.state.closed === true ? this.setState({ width: '0%' }) : null;
   }
 
   render() {
@@ -51,7 +53,7 @@ export class Nav extends Component {
     return (
       <div className="test">
         <div id="myNav" className="overlay" style={divWidth}>
-          <a href="#" className="closebtn" onClick={this.changeNavState}>
+          <a className="closebtn" onClick={this.changeNavState}>
             <div
               id="nav-icon"
               className={`${this.state.innerNav} ${this.state.class}`}
@@ -77,7 +79,7 @@ export class Nav extends Component {
             </a>
           </div>
         </div>
-        <a href="#" className="fixed-menu" onClick={this.changeNavState}>
+        <a className="fixed-menu" onClick={this.changeNavState}>
           <div
             id="nav-icon"
             className={`${this.state.outerNav} ${this.state.class}`}

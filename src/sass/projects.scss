@@ -56,15 +56,21 @@
 
   .parallax__group:nth-of-type(odd) {
     .links {
-      align-items: flex-start;
+      display: none;
     }
     .parallax__layer.parallax__layer--fore {
       background: rgba(0, 0, 0, 0.5);
       width: 100vw;
       color: #fff;
+      .mobile-links {
+        display: block;
+      }
 
       @media all and (min-width: $screen-sm) {
         left: 0;
+        .mobile-links {
+          display: none;
+        }
       }
       @media all and (min-width: $screen-md) {
         width: 46vw;
@@ -81,6 +87,7 @@
       img {
         display: none;
       }
+
       @media all and (max-width: $screen-xs) {
         top: -7em;
       }
@@ -89,6 +96,10 @@
         img:nth-of-type(1) {
           display: block;
           margin-bottom: 0.4em;
+        }
+        .links {
+          display: inline-flex;
+          align-items: flex-start;
         }
       }
       @media all and (min-width: $screen-md) {
@@ -102,11 +113,11 @@
           display: block;
         }
       }
-      @media all and (min-width: $screen-lg) {
+      @media all and (min-width: $screen-xl) {
         padding: 2em;
         top: 3em;
         bottom: 3em;
-        right: 11em;
+        right: 13em;
         width: 44vw;
         text-align: left;
       }
@@ -123,12 +134,19 @@
   }
   .parallax__group:nth-of-type(even) {
     .links {
-      align-items: flex-end;
+      display: none;
     }
     .parallax__layer.parallax__layer--fore {
       width: 100vw;
       background-color: rgba(0, 0, 0, 0.6);
-
+      .mobile-links {
+        display: block;
+      }
+      @media all and (min-width: $screen-sm) {
+        .mobile-links {
+          display: none;
+        }
+      }
       @media all and (min-width: $screen-md) {
         top: 0;
         bottom: 0;
@@ -142,6 +160,9 @@
         left: initial;
         right: 8em;
         width: 46vw;
+      }
+      @media all and (min-width: $screen-xl) {
+        right: 9em;
       }
     }
     .parallax__layer--perp {
@@ -158,6 +179,10 @@
         img:nth-of-type(1) {
           display: block;
           margin-bottom: 0.4em;
+        }
+        .links {
+          display: inline-flex;
+          align-items: flex-end;
         }
       }
       @media all and (min-width: $screen-md) {
@@ -178,7 +203,7 @@
       }
       @media all and (min-width: $screen-xl) {
         width: 43vw;
-        left: 13em;
+        left: 14em;
       }
       img {
         width: 100%;

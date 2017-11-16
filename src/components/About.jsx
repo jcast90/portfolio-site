@@ -3,12 +3,6 @@ import profile from '../assets/profile-pic.jpg';
 
 export class About extends Component {
   render() {
-    var background = {
-      backgroundImage: `url(${profile})`,
-      backgroundPosition: 'center center',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'none'
-    };
     return (
       <div className="about-section parallax__group">
         <header className="section-title">
@@ -18,7 +12,7 @@ export class About extends Component {
         </header>
         <div className="parallax__layer parallax__layer--fore">
           <div className="image">
-            <img src={profile} />
+            <img src={profile} alt="profile-pic" />
           </div>
         </div>
         <div className="parallax__layer parallax__layer--perp">
@@ -34,7 +28,9 @@ export class About extends Component {
               <li>React</li>
               <li>Node</li>
               <li>Sass</li>
-              <li>& more...</li>
+              <a href="#contact">
+                <li>& more...</li>
+              </a>
             </ul>
           </div>
         </div>

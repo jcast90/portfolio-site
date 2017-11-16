@@ -60,8 +60,10 @@
       outline: none;
       text-align: center;
       font-size: 1.2em;
-
-      @media all and (min-width: 700px) {
+      @media all and (max-width: $screen-xs) {
+        padding: 0;
+      }
+      @media all and (min-width: $screen-md) {
         width: 50%;
       }
     }

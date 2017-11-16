@@ -11,6 +11,7 @@
     "axios": "^0.17.0",
     "body-parser": "^1.18.2",
     "chart.js": "^2.7.1",
+    "console-emoji": "0.0.2",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "google-spreadsheet": "^2.0.4",
@@ -28,13 +29,11 @@
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/styles -o src",
-    "watch-css":
-      "npm run build-css && node-sass-chokidar src/styles -o src --watch --recursive",
+    "watch-css": "npm run build-css && node-sass-chokidar src/styles -o src --watch --recursive",
     "start-js": "react-scripts start",
     "start": "npm run build && node server.js",
     "dev": "npm-run-all -p watch-css start-js",
-    "build":
-      "npm run build-css && react-scripts build && rm build/static/**/*.map",
+    "build": "npm run build-css && react-scripts build && rm build/static/**/*.map",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }

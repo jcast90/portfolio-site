@@ -57,10 +57,11 @@
 
 .fixed-menu {
   position: fixed;
-  top: 0;
+  top: 10px;
   left: 0;
-  padding: 1em;
+  padding: 1em 1em 1.45em;
   z-index: 1000;
+  background-color: $banner-red;
 }
 
 // Hamburger menu

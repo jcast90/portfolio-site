@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { About } from './components/About';
 import { Contact } from './components/Contact';
-import { Skills } from './components/skills';
 import './App.css';
 import { Projects } from './components/Projects.jsx';
 import { Project } from './components/Project.jsx';
 import { Nav } from './components/Nav';
 
-console.log(Projects);
 class App extends Component {
   constructor(props) {
     super(props);
