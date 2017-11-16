@@ -7,7 +7,7 @@ const app = express();
 const GoogleSpreadsheet = require('google-spreadsheet');
 const async = require('async');
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 80;
 
 const path = require('path');
 const doc = new GoogleSpreadsheet(
@@ -29,7 +29,7 @@ app.get('*', (req, res) => {
 });
 
 app.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Origin', 'www.jonathan-lancaster.com');
   res.header(
     'Access-Control-Allow-Headers',
     'Origin, X-Requested-With, Content-Type, Accept'
