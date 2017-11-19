@@ -18,7 +18,7 @@ export const Projects = [
     solution:
       "To achieve the functionality of this app, I carefully mapped out my components and figured out how to pass the corresponding props and data down to each one. In order to generate the random playlist, I had the user choose a mood. I then stored that selection in a variable and passed it back through to Spotify's API and used that as a query. Spotify then would return an array of 20 playlists matching that mood. Next I created a random number generator between the numbers of 0 and 20 and used that to randomly generate a playlist for the user.",
     links: {
-      site: 'https://serene-everglades-94130.herokuapp.com/',
+      site: 'https://speakeasy-hackathon.herokuapp.com/',
       github: 'https://github.com/jcast90/speakeasy-react-hackathon'
     },
     img: speakeasy,
@@ -34,7 +34,7 @@ export const Projects = [
     solution:
       'Although there was a lot of struggle on this project, I definitely learned a lot about React. My first mistake was trying to break it down into way too many components, I had to take a step back and compile it down to fewer components. Another topic I became familiar with was how states and props work with several components and how to properly pass them down. Overall this was a fun project to work with and helped me understand the world of React a lot more.',
     links: {
-      site: 'https://desolate-stream-60822.herokuapp.com/',
+      site: 'https://vstda-oca.herokuapp.com/',
       github: 'https://github.com/jcast90/startnow-react100-vstda'
     },
     img: vstda,

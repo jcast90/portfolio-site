@@ -226,6 +226,9 @@ body {
 
 .projects {
   z-index: 4; }
+  .projects a.mobile-links {
+    font-weight: 800;
+    margin-bottom: 1em; }
   .projects .content {
     text-align: left;
     color: #fff;
