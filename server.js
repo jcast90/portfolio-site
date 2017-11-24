@@ -7,7 +7,7 @@ const app = express();
 const GoogleSpreadsheet = require('google-spreadsheet');
 const async = require('async');
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 8080;
 
 const path = require('path');
 const doc = new GoogleSpreadsheet(
@@ -40,9 +40,6 @@ app.use(function(req, res, next) {
 // googlesheets= https://sheets.googleapis.com/v4/spreadsheets
 // //instead of using res.send we can use,
 // //res.render to send the output of the template by filename
-// app.get('/contact', (req, res) => {
-
-// });
 
 app.get('/contact', (req, res) => {
   res.send('OK');
