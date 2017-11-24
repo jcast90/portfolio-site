@@ -29,7 +29,7 @@ app.get('*', (req, res) => {
 });
 
 app.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', 'www.jonathan-lancaster.com');
+  res.header('Access-Control-Allow-Origin', '*');
   res.header(
     'Access-Control-Allow-Headers',
     'Origin, X-Requested-With, Content-Type, Accept'
