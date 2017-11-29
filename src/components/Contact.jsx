@@ -22,7 +22,7 @@ export class Contact extends Component {
             <input
               className="input-item name-input"
               placeholder="What's your email address?"
-              type="text"
+              type="email"
               onChange={this.props.change('email')}
             />
           </div>
