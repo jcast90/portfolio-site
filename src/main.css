@@ -512,6 +512,9 @@ body {
 
 a {
   color: #fff; }
+  @media all and (max-width: 414px) {
+    a {
+      color: #000; } }
 
 .about-section p {
   text-align: left;
@@ -520,7 +523,9 @@ a {
 
 @media all and (max-width: 414px) {
   .about-section .section-title {
-    margin-top: 2em; } }
+    margin-top: 2em; }
+  .about-section a {
+    color: black; } }
 
 .about-section .parallax__layer--fore {
   width: 100vw;
@@ -552,7 +557,7 @@ a {
   width: 100vw;
   right: initial; }
   .about-section .parallax__layer--perp .content {
-    top: 30%;
+    top: 40%;
     width: 80%;
     text-align: left; }
     .about-section .parallax__layer--perp .content ul {
@@ -591,11 +596,18 @@ a {
 
 .contact-form-wrapper {
   text-align: center; }
+  .contact-form-wrapper a.icons {
+    margin-right: 2em; }
+    .contact-form-wrapper a.icons img {
+      transition: all 0.5s ease; }
+      .contact-form-wrapper a.icons img:hover {
+        transform: scale(1.3);
+        cursor: pointer; }
   .contact-form-wrapper .section-title {
     font-size: 3em; }
   @media all and (min-width: 768px) {
     .contact-form-wrapper {
-      margin: 4em auto; } }
+      margin: 3.6em auto; } }
 
 .contact-form {
   display: flex;

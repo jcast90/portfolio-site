@@ -4,11 +4,23 @@
 }
 .contact-form-wrapper {
   text-align: center;
+  a.icons {
+    margin-right: 2em;
+    img {
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: scale(1.3);
+        cursor: pointer;
+      }
+    }
+  }
+
   .section-title {
     font-size: 3em;
   }
   @media all and (min-width: $screen-sm) {
-    margin: 4em auto;
+    margin: 3.6em auto;
   }
 }
 //add background-color to projects on mobile below iphone 6

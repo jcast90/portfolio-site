@@ -3,6 +3,9 @@
 }
 a {
   color: #fff;
+  @media all and (max-width: $screen-xs) {
+    color: #000;
+  }
 }
 .about-section {
   p {
@@ -13,6 +16,9 @@ a {
   @media all and (max-width: $screen-xs) {
     .section-title {
       margin-top: 2em;
+    }
+    a {
+      color: black;
     }
   }
 
@@ -48,7 +54,7 @@ a {
     right: initial;
 
     .content {
-      top: 30%;
+      top: 40%;
       width: 80%;
       text-align: left;
 

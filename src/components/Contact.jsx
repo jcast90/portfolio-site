@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import github from '../assets/github_logo.svg';
+import linkedin from '../assets/linkedin_logo.svg';
 
 export class Contact extends Component {
   render() {
@@ -41,6 +43,22 @@ export class Contact extends Component {
             Send me some e-mail!
           </button>
         </form>
+        <a
+          href="https://github.com/jcast90"
+          target="_blank"
+          alt="github-logo-link"
+          className="icons"
+        >
+          <img src={github} width="50px" height="50px" alt="github-logo" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/jonathan-c-lancaster/"
+          target="_blank"
+          alt="linkedin-logo-link"
+          className="icons"
+        >
+          <img src={linkedin} width="50px" height="50px" alt="linkedin-logo" />
+        </a>
       </div>
     );
   }
